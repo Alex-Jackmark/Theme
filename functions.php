@@ -75,8 +75,9 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 add_action( 'woocommerce_before_single_product', 'woocommerce_single_product_summary_button', 11);
 
 function woocommerce_single_product_summary_button() {
+	$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
 	echo '<div id="shop-back">
-		       <a class="back_button" href="http://127.0.0.1:8000/wp14-02-17/wordpress/shop">Back to Shop</a>
+		       <a class="back_button" href="' . $shop_page_url . '">Back to Shop</a>
 		  </div>';
 }
 
