@@ -1,7 +1,3 @@
-.*
-text
-!/.gitignore
-
 woocommerce/
 header.php
 index.php
