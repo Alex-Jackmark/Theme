@@ -622,7 +622,7 @@ CONTENTS
 	color: black;
 }
 
-#cart-container #cart-contents, #navbar-ex-collapse-child .menu-item a {
+#cart-container #cart-contents, #navbar-ex-collapse-child .menu-item a, #meta-container .fa-chevron-down {
 	color: white;
 }
 
@@ -649,7 +649,7 @@ CONTENTS
 	margin: auto 0;
 }
 
-#cart-container, #meta-container .tester { 
+#meta-container .tester { 
 	background-color: #d2d2d2;
 }
 
@@ -661,7 +661,7 @@ CONTENTS
 	flex-basis: 80%;
 }
 
-#cart-container #cart-contents:hover {
+#cart-container #cart-contents:hover, #cart-container #cart-contents #cart-icon {
 	color: red;
 }
 
@@ -683,6 +683,7 @@ CONTENTS
 
 #login {
 	height: 50%;
+	list-style: none;
 }
 
 #login p {
@@ -840,6 +841,14 @@ body .container .row {
 	font-size: 20px !important; 
 }
 
+.woocommerce a.button.alt {
+	background-color: red;
+}
+
+.woocommerce a.button.alt:hover, .woocommerce a.button.alt:focus {
+	background-color: #890909;
+}
+
 /* WOOCOMMERCE SHOP PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .woocommerce ul.products li.product .button, .archive .col-md-8 {
@@ -862,7 +871,7 @@ body .container .row {
 	color: black !important;
 }
 
-.woocommerce ul.products li.product .woocommerce-price-amount { 
+.woocommerce ul.products li.product .price { 
 	text-align: center;
 }
 
@@ -886,8 +895,8 @@ body .container .row {
 	background: #890909;
 }
 
-.archive.content {
-	padding: 2vh 5%; 
+.archive .content {
+	padding: 6vh 5%; 
 }
 
 .archive .col-md-8 span, .archive .col-md-8 a {
@@ -929,7 +938,7 @@ body .container .row {
 
 .single-product .content {
 	flex-wrap: wrap;
-	padding: 2vh 5%; 
+	padding: 6vh 5%; 
 }
 
 .single-product .product {
@@ -1002,6 +1011,12 @@ body .container .row {
 	font-weight: bold;
 }	
 
+.content ul, .content li, .content blockquote {
+	margin-bottom: 5vh;
+	list-style: none;
+	font-weight: 700;
+}
+
 /* WOOCOMMERCE ACCOUNT PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation, .woocommerce-account #accountContainer, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
@@ -1022,6 +1037,10 @@ body .container .row {
 
 .woocommerce-account .woocommerce, .woocommerce-cart .woocommerce, .woocommerce-MyAccount-content table {
 	background-color: white;
+}
+
+.woocommerce-account.logged-in .button, .woocommerce-account.logged-in .button:hover, .woocommerce-account.logged-in .button:focus {
+	color: white;
 }
 
 .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .logged-in .woocommerce-MyAccount-content form p:last-of-type {
@@ -1099,6 +1118,10 @@ woocommerce-account.logged-in > .container {
 	padding: 10vh 0 2vh 0;
 }
 
+.woocommerce-account .container .content {
+	padding: 6vh 5%;
+}
+
 .logged-in .woocommerce-MyAccount-content form p:last-of-type {
 	float: left;
 	margin-top: 3vh;
@@ -1112,13 +1135,24 @@ woocommerce-account.logged-in > .container {
 	padding-top: 5px;
 }
 
+
+.woocommerce-account.logged-in .button {
+	background-color: red;
+	border: red !important;
+}
+
+.woocommerce-account.logged-in input.button:hover, .woocommerce-account.logged-in input.button:focus {
+	background-color: #890909;
+	border: #890909;
+}
+
 /* WOOCOMMERCE CART PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .return-to-shop, .cart_item .product-thumbnail {
 	display: flex;
 }
 
-.woocommerce-cart .container .row, .woocommerce-cart .container .col-md-12, .woocommerce-cart .container .content, .woocommerce-cart .container .page, .woocommerce-cart .woocommerce:before {
+.woocommerce-cart .container .col-md-12, .woocommerce-cart .container .content, .woocommerce-cart .container .page, .woocommerce-cart .woocommerce:before {
 	width: 100%;
 }
 
@@ -1174,6 +1208,10 @@ woocommerce-account.logged-in > .container {
 	margin: 0 !important;
 }
 
+.woocommerce-cart .entry {
+	flex-wrap: wrap;
+}
+
 /* WOOCOMMERCE CHECKOUT PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .woocommerce-checkout #rememberme, .woocommerce-checkout #createaccount {
@@ -1189,13 +1227,17 @@ woocommerce-account.logged-in > .container {
 	display: none;
 }
 
-.woocommerce-checkout .form-row .button {
+.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order, .woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus, body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
+	color: white;
+}
+
+.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order {
 	background-color: red;
 	float: none;
 	padding: 2vh 4vw;
 }
 
-.woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus {
+.woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus, body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
 	background-color: #890909;
 }
 
@@ -1336,13 +1378,20 @@ body.woocommerce-order-recieved .content {
 	height: 4vh;
 }
 
+.woocommerce-order-received .entry {
+	flex-wrap: wrap;
+}
+
 
 /* THEME-MY-LOGIN LOGIN PAGE (MAIN)
 ==================================================================================================================================================================================== */	
-.page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471 .row, .page-id-471 .col-md-12, .page-id-468 .tml-rememberme-wrap, .page-id-468 .tml-rememberme-submit-wrap, #theme-my-login ul.tml-action-links, div.tml .tml-action-links li { 
+.page-id-468 .container, .page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .container, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471, .container, .page-id-471 .row, .page-id-471 .col-md-12, .page-id-468 .tml-rememberme-wrap, .page-id-468 .tml-rememberme-submit-wrap, #theme-my-login ul.tml-action-links, div.tml .tml-action-links li, div.tml .tml-action-links li { 
 	display: flex;																													 
 }	
 
+div.tml .tml-action-links li, div.tml .tml-action-links li a {
+	flex: 1;
+}
 
 .page-id-468 .tml-submit-wrap, .tml {
 	margin: auto;
@@ -1360,7 +1409,7 @@ body.woocommerce-order-recieved .content {
 	background-color: #eee;
 }
 
-.page-id-468 .tml-rememberme-wrap {
+.page-id-468 .tml-rememberme-wrap, .page-id-468 .col-md-12, .page-id-470 .col-md-12, .page-id-471 .col-md-12 {
 	flex-basis: 100%;
 }
 
@@ -1434,6 +1483,13 @@ div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
 #wp-submit:hover, #wp-submit:focus {
 	background-color: #890909;
 	border-color: #890909;
+}
+
+#theme-my-login:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 5vh;
 }
 
 /* CONTACT PAGE (MAIN)
@@ -1512,7 +1568,10 @@ div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
 	border-radius: 2px;
 	background-color: white;
 	position: absolute; 
-	top: 70%
+}
+
+#contact-side-content #open-hours {
+	top: 70%;
 }
 
 .page-id-38 .container {
@@ -1540,6 +1599,10 @@ div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
 ==================================================================================================================================================================================== */
 .spacer {
 	display: none;
+}
+
+.row {
+	flex-basis: 100%;
 }
 
 /* RECAPTCHA (MAIN)
