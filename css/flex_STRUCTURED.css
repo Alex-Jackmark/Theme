@@ -1030,11 +1030,13 @@ body .container .row {
 
 /* WOOCOMMERCE ACCOUNT PAGE (MAIN)
 ==================================================================================================================================================================================== */	
-.woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation, .woocommerce-account #accountContainer, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
+.woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .woocommerce-account .woocommerce,
+.woocommerce-MyAccount-navigation, .woocommerce-account #accountContainer, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
 	height: 100%;
 }
 
-.woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .woocommerce-MyAccount-navigation, .woocommerce-MyAccount-navigation-link, .woocommerce-account #accountContainer, .woocommerce-MyAccount-navigation ul {
+.woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .woocommerce-MyAccount-navigation, .woocommerce-MyAccount-navigation-link, .woocommerce-account #accountContainer,
+.woocommerce-MyAccount-navigation ul {
 	display: flex;
 }
 
@@ -1176,7 +1178,11 @@ woocommerce-account.logged-in > .container {
    
 .cart-empty {                              
 	text-align: center;                    
-}                                          
+}        
+
+.woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart], .woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart]:hover, .woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart]:focus {
+	color: white;
+}
 
 .woocommerce-cart .woocommerce-message {
 	margin-top: 2vh !important;
@@ -1218,6 +1224,14 @@ woocommerce-account.logged-in > .container {
 	flex-wrap: wrap;
 }
 
+.woocommerce-cart input[name=update_cart] {
+	background-color: red;
+}
+
+.woocommerce-cart input[name=update_cart]:hover, .woocommerce-cart input[name=update_cart]:focus {
+	background-color: #890909;
+}
+
 /* WOOCOMMERCE CHECKOUT PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .woocommerce-checkout #rememberme, .woocommerce-checkout #createaccount {
@@ -1233,7 +1247,8 @@ woocommerce-account.logged-in > .container {
 	display: none;
 }
 
-.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order, .woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus, body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
+.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order, .woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus,
+body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
 	color: white;
 }
 
@@ -1293,7 +1308,8 @@ woocommerce-account.logged-in > .container {
 
 /* WOOCOMMERCE ORDER RECEIVED PAGE (MAIN)
 ==================================================================================================================================================================================== */	
-.woocommerce-order-received .entry:before, .woocommerce-order-received .entry:after, .woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce:after, .woocommerce-order-received #instruction-container:after, .woocommerce-order-received #instruction-container:after  {
+.woocommerce-order-received .entry:before, .woocommerce-order-received .entry:after, .woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce:after,
+.woocommerce-order-received #instruction-container:after, .woocommerce-order-received #instruction-container:after  {
 	content: "";
 	display: block;
 	width: 100%;
@@ -1403,7 +1419,8 @@ body.woocommerce-order-recieved .content {
 
 /* THEME-MY-LOGIN LOGIN PAGE (MAIN)
 ==================================================================================================================================================================================== */	
-.page-id-468 .container, .page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .container, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471, .container, .page-id-471 .row, .page-id-471 .col-md-12, .page-id-468 .tml-rememberme-wrap, .page-id-468 .tml-rememberme-submit-wrap, #theme-my-login ul.tml-action-links, div.tml .tml-action-links li, div.tml .tml-action-links li, .tml-submit-wrap { 
+.page-id-468 .container, .page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .container, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471, .container, .page-id-471 .row, .page-id-471 .col-md-12,
+.page-id-468 .tml-rememberme-wrap, .page-id-468 .tml-rememberme-submit-wrap, #theme-my-login ul.tml-action-links, div.tml .tml-action-links li, div.tml .tml-action-links li, .tml-submit-wrap { 
 	display: flex;																													 
 }	
 
