@@ -273,13 +273,13 @@ CONTENTS
 		top: 14vh;
 	}
 	
-	.navbar { 
+	nav.navbar { 
 		height: 14vh;
 	}
 
 /* ALL PAGES
 ========================================================================================== */	
-	body > .container {
+	body > div.container {
 		padding-top: 14vh;
 	}
 	
