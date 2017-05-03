@@ -610,7 +610,7 @@ CONTENTS
 	height: 100%;
 }
 
-#cart-container #cart-contents, #cart-container #cart-contents span, #usernameContainer p, .myAccountItem p, .logOutItem p, #login p {
+#cart-container #cart-contents, #cart-container #cart-contents span, #usernameContainer p, .myAccountItem p, .logOutItem p, #login p, #userMenuCollapse .fa {
 	margin: auto;
 }
 
@@ -699,6 +699,14 @@ CONTENTS
 	color: #e61717;
 }
 
+#usernameContainer {
+	flex-basis: 85%;
+}
+
+#userMenuCollapse {
+	flex-basis: 15%;
+}
+
 #meta-container .hiddenItem {
 	display: none !important;
 }
@@ -721,6 +729,8 @@ CONTENTS
 #menu-menu-1 .menu-item.active a { 
 	border-bottom: 2px solid #0080ff !important;
 }
+
+
 
 /* BODY SECTION (MAIN)
 ==================================================================================================================================================================================== */	
@@ -918,7 +928,7 @@ body .container .row {
 	background-color: red;
 }
 
-.single-product .container:after, .single-product .single_add_to_cart_button, .single-product .col-md-8 {
+.single-product .container:after, .single-product .single_add_to_cart_button, .single-product .col-md-8, .single-product .quantity {
 	width: 100%;
 }
 
@@ -1131,11 +1141,6 @@ woocommerce-account.logged-in > .container {
 	overflow: scroll;
 }
 
-.logged-in .woocommerce-MyAccount-content {
-	padding-top: 5px;
-}
-
-
 .woocommerce-account.logged-in .button {
 	background-color: red;
 	border: red !important;
@@ -1241,7 +1246,7 @@ woocommerce-account.logged-in > .container {
 	background-color: #890909;
 }
 
-.woocommerce-checkout .create-account {
+.woocommerce-checkout .create-account, .woocommerce-checkout .woocommerce-account-fields .create-account .checkbox {
 	display: flex;
 }
 
@@ -1275,6 +1280,14 @@ woocommerce-account.logged-in > .container {
 
 .woocommerce-checkout .woocommerce { 
 	padding-top: 2% !important;
+}
+
+.woocommerce-checkout .form-row input[type=submit] {
+	margin-right: 3%;
+}
+
+.woocommerce-checkout .checkbox input[type=checkbox] {
+	position: static;
 }
 
 /* WOOCOMMERCE ORDER RECEIVED PAGE (MAIN)
@@ -1380,6 +1393,10 @@ body.woocommerce-order-recieved .content {
 
 .woocommerce-order-received .entry {
 	flex-wrap: wrap;
+}
+
+.woocommerce-order-received .woocommerce {
+	padding-bottom: 0;
 }
 
 
@@ -1603,6 +1620,10 @@ div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
 
 .row {
 	flex-basis: 100%;
+}
+
+body section {
+	padding: 0;
 }
 
 /* RECAPTCHA (MAIN)
